@@ -5,7 +5,7 @@
     </div>
     <div class="actions">
       <div class="buttons">
-        <v-btn class="btn-secondary" depressed icon
+        <v-btn large class="btn-secondary" depressed icon
           ><v-icon>mdi-account</v-icon></v-btn
         >
       </div>
