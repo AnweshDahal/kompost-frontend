@@ -30,7 +30,7 @@
               >
             </v-list-item>
             <v-list-item>
-              <v-list-item-title class="li-title"
+              <v-list-item-title  @click="leaderboard()" class="li-title"
                 >Leaderboard</v-list-item-title
               >
             </v-list-item>

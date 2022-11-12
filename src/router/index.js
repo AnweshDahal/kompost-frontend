@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Store from "../views/Store.vue";
+import Leaderboard from "../views/Leaderboard.vue";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
     path: "/store",
     name: "Store",
     component: Store,
+  },
+  {
+    path: "/leaderboard",
+    name: "Leaderboard",
+    component: Leaderboard,
   },
 ];
 
