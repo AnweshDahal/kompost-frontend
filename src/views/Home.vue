@@ -39,6 +39,42 @@
                     dense
                   ></v-text-field>
                 </v-col>
+                <!-- Address Input -->
+                <v-col
+                  cols="12"
+                  style="margin-bottom: 0px; padding-bottom: 0px"
+                >
+                  <v-menu
+                    ref="pickupDate"
+                    v-model="pickup.pickupDate"
+                    :close-on-content-click="false"
+                    :return-value.sync="date"
+                    transition="scale-transition"
+                    offset-y
+                    min-width="auto"
+                  >
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-text-field
+                        v-model="newPickupDate"
+                        placeholder="Pickup Date"
+                        filled
+                        rounded
+                        dense
+                        readonly
+                        v-bind="attrs"
+                        v-on="on"
+                        :rules="dateRules"
+                      ></v-text-field>
+                    </template>
+                    <v-date-picker
+                      v-model="newPickupDate"
+                      @change="pickupDate = false"
+                      no-title
+                      scrollable
+                    >
+                    </v-date-picker>
+                  </v-menu>
+                </v-col>
                 <!-- Weight Input -->
                 <v-col
                   cols="12"
@@ -123,11 +159,11 @@
           </div>
           <div class="section-image"></div>
           <div class="section-product">
-            <div @click="click('5kg')" class="product-card mx-2">
+            <div @click="click()" class="product-card mx-2">
               <v-icon style="font-size: 3rem" color="#5cdb94">mdi-sack</v-icon>
               <span>5kg</span>
             </div>
-            <div @click="click('5kg')" class="product-card mx-2">
+            <div @click="click()" class="product-card mx-2">
               <v-icon style="font-size: 3rem" color="#5cdb94">mdi-sack</v-icon>
               <span>10kg</span>
             </div>
@@ -147,12 +183,17 @@ export default {
         mobileNumber: null,
         address: null,
         weight: null,
+        pickupDate: null,
       },
     };
   },
   created() {},
   mounted() {},
-  methods: {},
+  methods: {
+    click() {
+      this.$router.push("/store");
+    },
+  },
   components: {},
 };
 </script>
@@ -271,7 +312,8 @@ export default {
   display: block;
   height: 350px;
   background-position: center;
-  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJYl7iuKNHe0shd6Yg1KXVwbsyTNEnpmogpwwg_AE3cB8bVDMXgBxlaV7t4xZK9RkLpI8&usqp=CAU"); */
+  background-size: contain;
+  background-image: url("https://raw.githubusercontent.com/AnweshDahal/project-image-host/ee41a1bb3b1277a1da6c75fd6c398c00650ee86c/Frame%2010.png");
 }
 
 .why-container .section-description p {
