@@ -124,10 +124,11 @@
           <div class="section-image"></div>
           <div class="section-description">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              earum magni eum magnam adipisci! Doloribus nulla amet earum saepe
-              voluptates quidem, non, reprehenderit voluptas vero error, fuga
-              fugiat provident corrupti.
+              Kompost takes the most common waste produced in today's society,
+              and aims to solve another major issue faced by major metropolis,
+              Land Pollution. We work to reduce organic waste that ends up in
+              dumping sites by converting this waste into organic compost, a
+              fertilizer that is good for the plant and the soil.
             </p>
           </div>
         </div>
